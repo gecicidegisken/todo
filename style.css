@@ -1,0 +1,185 @@
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ul {
+  width: 30%;
+}
+ul li {
+  margin: 10px 0px 0px 0px;
+  list-style-type: none;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+ul li.checked:hover {
+  background: green;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the header */
+.header {
+  background-color: rgba(255, 249, 249, 0.212);
+  font-family: "Zen Loop", cursive;
+  margin-top: 15px;
+  padding: 30px 40px;
+  color: black;
+  text-align: center;
+  border-radius: 5%;
+  width: 30%;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header h2 {
+  font-size: 30px;
+}
+
+/* Input bxo */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 5%;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  background-color: rgba(255, 249, 249, 0.815);
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px 10px 10px 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5%;
+  color: purple;
+  border: none;
+
+  height: 39px;
+  width: 20%;
+  margin-left: 5px;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.deleteBtn {
+  position: absolute;
+  right: 0;
+  border-style: none;
+  background-color: transparent;
+  padding: 5px;
+}
+.deleteBtn:hover {
+  cursor: pointer;
+}
+.checkBox {
+  position: absolute;
+  left: 0;
+  border-style: none;
+  background-color: transparent;
+  padding: 5px;
+
+  content: "";
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  top: 10px;
+  left: 16px;
+  height: 15px;
+  width: 7px;
+}
+.checkBox:hover {
+  cursor: pointer;
+}
+.checkBox:done {
+  content: "";
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0px 2px 0px 2px;
+  top: 10px;
+  left: 16px;
+  height: 15px;
+  width: 7px;
+}
+.delete {
+  display: none;
+}
+.done {
+  background-color: #73bf5c;
+  color: white;
+  text-decoration-line: line-through;
+}
