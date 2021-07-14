@@ -11,7 +11,9 @@ function newTask() {
   //Check if input is not null
   else if (input.value === "" || input.value === null) {
     btn.addEventListener("click", alert("Task cannot be empty."));
-  } else {
+  }
+  //if all conditions held
+  else {
     var newTask = document.createElement("LI");
     var textnode = document.createTextNode(input.value);
     newTask.appendChild(textnode);
@@ -42,8 +44,8 @@ function newTask() {
       checkBox.classList.toggle("checked");
     });
 
-    //save list to the local storage
-    localStorage.setItem("todo-list", JSON.stringify(list.outerHTML));
+    //clear the input box
+    input.value = "";
   }
 }
 
@@ -68,13 +70,3 @@ function delBtn(button, length, task) {
     task.style.backgroundColor = "white";
   });
 }
-
-//events
-// Check for saved  items
-// var saved = localStorage.getItem("todo-list");
-//
-// If there are any saved items, update our list
-// if (saved) {
-// list.innerHTML = JSON.parse(localStorage.getItem("todo-list"));
-// }
-//
