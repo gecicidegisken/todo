@@ -5,7 +5,7 @@ var leng = 0;
 // Create the new task
 function newTask() {
   //Check Task Count
-  if (leng > 9) {
+  if (leng > 8) {
     btn.addEventListener("click", alert("Enough tasks for today :)"));
   }
   //Check if input is not null
@@ -41,6 +41,9 @@ function newTask() {
       newTask.classList.toggle("done");
       checkBox.classList.toggle("checked");
     });
+
+    //save list to the local storage
+    localStorage.setItem("todo-list", JSON.stringify(list.outerHTML));
   }
 }
 
@@ -65,4 +68,13 @@ function delBtn(button, length, task) {
     task.style.backgroundColor = "white";
   });
 }
+
 //events
+// Check for saved  items
+// var saved = localStorage.getItem("todo-list");
+//
+// If there are any saved items, update our list
+// if (saved) {
+// list.innerHTML = JSON.parse(localStorage.getItem("todo-list"));
+// }
+//
