@@ -30,7 +30,7 @@ ul li {
 
 /* Darker background-color on hover */
 ul li:hover {
-  background: #ddd;
+  background: #cacaca;
 }
 .main {
   display: flex;
@@ -51,30 +51,6 @@ ul li {
   list-style-type: none;
 }
 
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-ul li.checked:hover {
-  background: green;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: "";
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
 /* Style the header */
 .header {
   background-color: rgba(255, 249, 249, 0.212);
@@ -83,7 +59,7 @@ ul li.checked::before {
   padding: 30px 40px;
   color: black;
   text-align: center;
-  border-radius: 5%;
+  border-radius: 5px;
   width: 30%;
 }
 
@@ -98,11 +74,11 @@ ul li.checked::before {
   font-size: 30px;
 }
 
-/* Input bxo */
+/* Input box */
 input {
   margin: 0;
   border: none;
-  border-radius: 5%;
+  border-radius: 5px;
   width: 75%;
   padding: 10px;
   float: left;
@@ -121,10 +97,9 @@ input {
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 5%;
+  border-radius: 5px;
   color: purple;
   border: none;
-
   height: 39px;
   width: 20%;
   margin-left: 5px;
@@ -158,23 +133,13 @@ input {
   border-width: 2px 2px 2px 2px;
   top: 10px;
   left: 16px;
-  height: 15px;
-  width: 7px;
+  height: 20px;
+  width: 15px;
 }
 .checkBox:hover {
   cursor: pointer;
 }
-.checkBox:done {
-  content: "";
-  position: absolute;
-  border-color: black;
-  border-style: solid;
-  border-width: 0px 2px 0px 2px;
-  top: 10px;
-  left: 16px;
-  height: 15px;
-  width: 7px;
-}
+
 .delete {
   display: none;
 }
@@ -182,4 +147,16 @@ input {
   background-color: #73bf5c;
   color: white;
   text-decoration-line: line-through;
+}
+.checked {
+  display: inline-block;
+  transform: rotate(-135deg);
+  height: 24px;
+  width: 12px;
+  border-bottom: 7px #78b13f;
+  border-right: 7px #78b13f;
+}
+
+.done:hover {
+  background-color: green;
 }
